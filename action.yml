@@ -11,9 +11,11 @@ runs:
          
      - name: Setup environment
        run: echo "Setup environment"
+       shell: bash
        
      - name: Run the preprocess shell script
        run: echo "Run the preprocess shell script"
+       shell: bash
 
      # NOTE: The language dependent build actions are responsible for creating the release with the release artifacts
      - name: Java/Maven build
@@ -22,9 +24,12 @@ runs:
        
      - name: Java/Gradle build
        run: echo "Java/Gradle build"
-     
+       shell: bash
+
      - name: Golang build
        run: echo "Golang build"
-     
+       shell: bash
+
      - name: Run the postprocess shell script
        run: echo "Run the postprocess shell script"
+       shell: bash
