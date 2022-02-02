@@ -38,6 +38,7 @@ runs:
        with:
          java_version: ${{ steps.env.outputs.JAVA_VERSION }}
          java_distribution: ${{ steps.env.outputs.JAVA_DISTRIBUTION }}
+         gradle_version: ${{ steps.env.outputs.GRADLE_VERSION }}
 
      - name: Golang build
        shell: bash

@@ -2,6 +2,9 @@
 
 This is the primary action invoked by every repository build, this is the only dependency that must be injected into each repository.
 
+## TODO
+- Fork anothrNick/github-tag-action and add a tag prefix option
+- 
 ## Development
 ### Updating Release
 - Commit local changes
