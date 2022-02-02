@@ -14,6 +14,7 @@ runs:
        shell: bash
        run: |
          echo "Setup environment"
+         echo "${{ github }}"
          ./build-manifest.sh
 
      - name: Run the preprocess shell script
