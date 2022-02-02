@@ -1,0 +1,25 @@
+name: 'Build Java Maven Action'
+#
+description:
+runs:
+  using: "composite"
+  steps:
+     - name: Checkout repository
+       uses: actions/checkout@v2
+       with:
+         fetch-depth: '0'
+         
+     - name: Setup environment
+     
+     - name: Run the preprocess shell script
+     
+     # NOTE: The language dependent build actions are responsible for creating the release with the release artifacts
+     - name: Java/Maven build
+       if: hashFiles('pom.xml') != ''
+       uses: msummers-nr/build-java-maven-action@v1
+       
+     - name: Java/Gradle build
+     
+     - name: Golang build
+     
+     - name: Run the postprocess shell script
