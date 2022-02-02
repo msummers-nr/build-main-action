@@ -10,16 +10,21 @@ runs:
          fetch-depth: '0'
          
      - name: Setup environment
-     
+       run: echo "Setup environment"
+       
      - name: Run the preprocess shell script
-     
+       run: echo "Run the preprocess shell script"
+
      # NOTE: The language dependent build actions are responsible for creating the release with the release artifacts
      - name: Java/Maven build
        if: hashFiles('pom.xml') != ''
        uses: msummers-nr/build-java-maven-action@v1
        
      - name: Java/Gradle build
+       run: echo "Java/Gradle build"
      
      - name: Golang build
+       run: echo "Golang build"
      
      - name: Run the postprocess shell script
+       run: echo "Run the postprocess shell script"
