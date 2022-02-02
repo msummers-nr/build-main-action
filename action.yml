@@ -27,14 +27,14 @@ runs:
      # NOTE: The language dependent build actions are responsible for creating the release with the release artifacts
      - name: Java/Maven build
        if: hashFiles('pom.xml') != ''
-       uses: ${{ github.repository_owner }}/build-java-maven-action@v1
+       uses: "${{ github.repository_owner }}/build-java-maven-action@v1"
        with:
          java_version: ${{ steps.env.outputs.JAVA_VERSION }}
          java_distribution: ${{ steps.env.outputs.JAVA_DISTRIBUTION }}
 
      - name: Java/Gradle build
        if: hashFiles('build.gradle') != ''
-       uses: ${{ github.repository_owner }}/build-java-gradle-action@v1
+       uses: "${{ github.repository_owner }}/build-java-gradle-action@v1"
        with:
          java_version: ${{ steps.env.outputs.JAVA_VERSION }}
          java_distribution: ${{ steps.env.outputs.JAVA_DISTRIBUTION }}
